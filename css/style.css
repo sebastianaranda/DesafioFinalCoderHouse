@@ -482,11 +482,6 @@ form fieldset label {
   grid-template-areas: "title title title title title title" "player player player player player player";
   grid-column-end: 12; }
 
-.miniCoverReleases {
-  width: 90%;
-  max-width: 190px;
-  margin-bottom: 15px; }
-
 .coverAlbums {
   width: 250px;
   height: 250px;
@@ -532,12 +527,29 @@ form fieldset label {
   padding: 0;
   grid-column-start: 2;
   grid-column-end: 12; }
+  #containerReleasesAndSpotify .miniCoverReleases {
+    filter: brightness(70%);
+    width: 90%;
+    max-width: 190px;
+    margin-bottom: 15px; }
+    #containerReleasesAndSpotify .miniCoverReleases:hover {
+      transform: scale(1.1);
+      transition-duration: 200ms;
+      filter: brightness(100%); }
 
 #containerDiscography {
   grid-area: discography;
   padding: 0;
   grid-column-start: 2;
   grid-column-end: 12; }
+  #containerDiscography .miniAlbumHome {
+    filter: brightness(70%);
+    width: 90%;
+    margin-bottom: 16px; }
+    #containerDiscography .miniAlbumHome:hover {
+      transform: scale(1.1);
+      transition-duration: 200ms;
+      filter: brightness(100%); }
 
 .col {
   text-align: center; }
@@ -730,4 +742,12 @@ form label {
     .tourTable__buyDesktop {
       display: none; }
     .tourTable__icoTicketMobile {
-      display: block; } }
+      display: block; }
+  #containerReleasesAndSpotify .miniCoverReleases {
+    filter: brightness(100%); }
+    #containerReleasesAndSpotify .miniCoverReleases:hover {
+      transform: none; }
+  #containerDiscography .miniAlbumHome {
+    filter: brightness(100%); }
+    #containerDiscography .miniAlbumHome:hover {
+      transform: none; } }

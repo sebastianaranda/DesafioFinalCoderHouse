@@ -632,12 +632,6 @@ form fieldset label{
     grid-column-end: 12;
 }
 
-.miniCoverReleases{
-    width: 90%;
-    max-width: 190px;
-    margin-bottom: 15px;
-}
-
 .coverAlbums{
     width: 250px;
     height: 250px;
@@ -690,16 +684,42 @@ form fieldset label{
     padding: 0;
     grid-column-start: 2;
     grid-column-end: 12;
+
+    .miniCoverReleases{
+        @include photoBrightnessFilter(70%);
+
+        width: 90%;
+        max-width: 190px;
+        margin-bottom: 15px;
+        &:hover{
+            @include miniPhotoAnimation(1.1,200ms);
+            @include photoBrightnessFilter(100%);
+        }
+    }
 }
+
 #containerDiscography{
     grid-area: discography;
     padding: 0;
     grid-column-start: 2;
     grid-column-end: 12;
+    
+    .miniAlbumHome{
+        @include photoBrightnessFilter(70%);
+
+        width: 90%;
+        margin-bottom: 16px;
+        &:hover{
+            @include miniPhotoAnimation(1.1,200ms);
+            @include photoBrightnessFilter(100%);
+        }
+    }
 }
+
 .col{
     text-align: center;
 }
+
 .row{
     margin: 0;
     --bs-gutter-x:0;
@@ -975,6 +995,26 @@ form label{
         }
         &__icoTicketMobile{
             display: block;
+        }
+    }
+
+    #containerReleasesAndSpotify{
+        .miniCoverReleases{
+            @include photoBrightnessFilter(100%);
+
+            &:hover{ 
+                transform: none;
+            }
+        }
+    }
+
+    #containerDiscography{
+        .miniAlbumHome{
+            @include photoBrightnessFilter(100%);
+
+            &:hover{
+                transform: none;
+            }
         }
     }
 }
