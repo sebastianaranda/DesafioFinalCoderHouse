@@ -47,12 +47,12 @@
                 <img class="banner__bannerImg" src="../images/banners/banner04.jpg" alt="Imagen de portada">
             </section>
 
-            <section class="container-fluid" id="containerMainContact">
+            <section class="containerContact container-fluid">
                 <div class="row row-cols-1 row-cols-md-2">
                     <div class="col-md-5">
                         <div class="row">
                             <div class="col">
-                                <h2 class="tituloSeccion">Social Media</h2>
+                                <h2 class="containerContact__title">Social Media</h2>
                             </div>
                         </div>
                         <div class="row">
@@ -88,19 +88,19 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <h2 class="tituloSeccion">Licensing</h2>
+                                <h2 class="containerContact__title">Licensing</h2>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col">
-                                <a href="mailto:request@sirupmusic.com" class="emailContact">request@sirupmusic.com</a>
+                                <a href="mailto:request@sirupmusic.com" class="containerContact__email">request@sirupmusic.com</a>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-7">
                         <div class="row">
                             <div class="col">
-                                <h2 class="tituloSeccion">Booking</h2>
+                                <h2 class="containerContact__title">Booking</h2>
                             </div>
                         </div>
                         <div class="row">
@@ -116,10 +116,10 @@
                                     </div>
 
                                     <div class="row mb-3">
-                                        <label for="inputEventName" class="col-sm-4 col-form-label">
-                                            Event Location
-                                        </label>
-                                        <div class="col-sm-8">
+                                        <div class="col-sm-5 col-form-label">
+                                            <label for="inputEventLocation">Event Location</label>
+                                        </div>
+                                        <div class="col-sm-7">
                                             <select class="form-select" aria-label="Default select example" id="inputEventLocation" >
                                                 <option selected>Seleccione el tipo de evento</option>
                                                 <option value="1">Indoor</option>
@@ -131,19 +131,19 @@
                                     </div>
 
                                     <div class="row mb-3">
-                                        <label for="inputEventDate" class="col-sm-4 col-form-label">
-                                            Event Date
-                                        </label>
-                                        <div class="col-sm-8">
+                                        <div class="col-sm-5 col-form-label">
+                                            <label for="inputEventDate">Event Date</label>
+                                        </div>
+                                        <div class="col-sm-7">
                                             <input type="date" class="form-control" id="inputEventDate">
                                         </div>
                                     </div>
 
                                     <div class="row mb-3">
-                                        <label for="inputEventName" class="col-sm-4 col-form-label">
-                                            Event Size
-                                        </label>
-                                        <div class="col-sm-8">
+                                        <div class="col-sm-5 col-form-label">
+                                            <label for="inputEventSize">Event Size</label>
+                                        </div>
+                                        <div class="col-sm-7">
                                             <select class="form-select" aria-label="Default select example" id="inputEventSize" >
                                                 <option selected>Seleccione el tamaño del evento</option>
                                                 <option value="1">1 - 500 personas</option>
@@ -156,47 +156,46 @@
                                     </div>
 
                                     <div class="row mb-3">
-                                        <label for="inputSetDuration" class="col-sm-4 col-form-label">
-                                            Set Duration
-                                        </label>
-                                        <div class="col-sm-8">
+                                        <div class="col-sm-5 col-form-label">
+                                            <label for="inputSetDuration">Set Duration</label>
+                                        </div>
+                                        <div class="col-sm-7">
                                             <input type="number" class="form-control" id="inputSetDuration" placeholder="En minutos">
                                         </div>
                                     </div>
 
                                     <div class="row mb-3">
-                                        <label for="inputCompanyName" class="col-sm-4 col-form-label">
-                                            Company
-                                        </label>
-                                        <div class="col-sm-8">
+                                        <div class="col-sm-5 col-form-label">
+                                            <label for="inputCompanyName">Company</label>
+                                        </div>
+                                        <div class="col-sm-7">
                                             <input type="text" class="form-control" id="inputCompanyName" placeholder="Nombre de la compania">
                                         </div>
                                     </div>
 
                                     <div class="row mb-3">
-                                        <label for="inputFirstName" class="col-sm-4 col-form-label">
-                                            First Name
-                                        </label>
-                                        <div class="col-sm-8">
+                                        <div class="col-sm-5 col-form-label">
+                                            <label for="inputFirstName">First Name</label></div>
+                                        <div class="col-sm-7">
                                             <input type="text" class="form-control" id="inputFirstName" placeholder="Ingrese su nombre">
                                         </div>
                                     </div>
 
                                     <div class="row mb-3">
-                                        <label for="inputLastName" class="col-sm-4 col-form-label">
-                                            Last Name
-                                        </label>
-                                        <div class="col-sm-8">
+                                        <div class="col-sm-5 col-form-label">
+                                            <label for="inputLastName">Last Name</label>
+                                        </div>
+                                        <div class="col-sm-7">
                                             <input type="text" class="form-control" id="inputLastName" placeholder="Ingrese su apellido">
                                         </div>
                                     </div>
 
                                     <div class="row mb-3">
-                                        <label for="inputEventName" class="col-sm-4 col-form-label">
-                                            Country
-                                        </label>
-                                        <div class="col-sm-8">
-                                            <select class="form-select" aria-label="Default select example" id="inputEventSize" >
+                                        <div class="col-sm-5 col-form-label">
+                                            <label for="inputCountry">Country</label>
+                                        </div>
+                                        <div class="col-sm-7">
+                                            <select class="form-select" aria-label="Default select example" id="inputCountry" >
                                                 <option selected>Seleccione la región de su país</option>
                                                 <option value="1">NA</option>
                                                 <option value="2">LATAM</option>
@@ -207,33 +206,39 @@
                                     </div>
 
                                     <div class="row mb-3">
-                                        <label for="inputPhoneNumber" class="col-sm-4 col-form-label">
-                                            Phone Number
-                                        </label>
-                                        <div class="col-sm-8">
+                                        <div class="col-sm-5 col-form-label">
+                                            <label for="inputPhoneNumber">Phone Number</label>
+                                        </div>
+                                        <div class="col-sm-7">
                                             <input type="tel" class="form-control" id="inputPhoneNumber" placeholder="Ingrese su número de contacto">
                                         </div>
                                     </div>
 
                                     <div class="row mb-3">
-                                        <label for="inputEmail" class="col-sm-4 col-form-label">
-                                            Email
-                                        </label>
-                                        <div class="col-sm-8">
+                                        <div class="col-sm-5 col-form-label">
+                                            <label for="inputEmail">Email</label>
+                                        </div>
+                                        <div class="col-sm-7">
                                             <input type="email" class="form-control" id="inputEmail" placeholder="Ingrese su email de contacto">
                                         </div>
                                     </div>
 
                                     <div class="row mb-3">
-                                        <label for="inputMessage" class="col-sm-4 col-form-label">
-                                            Message
-                                        </label>
-                                        <div class="col-sm-8">
+                                        <div class="col-sm-5 col-form-label">
+                                            <label for="inputMessage">Message</label>
+                                        </div>
+                                        <div class="col-sm-7">
                                             <textarea class="form-control" id="inputMessage" placeholder="Ingrese cualquier otra información adicional"></textarea>
                                         </div>
                                     </div>
 
-                                    <button type="submit" class="btn btn-dark">Sign in</button>
+                                    <div class="row mb-3">
+                                        <div class="col-sm-5 col-form-label">
+                                        </div>
+                                        <div class="col-sm-7">
+                                            <button type="submit" class="btn btn-dark">Send</button>
+                                        </div>
+                                    </div>
                                 </form>
                             </div>
                         </div>
