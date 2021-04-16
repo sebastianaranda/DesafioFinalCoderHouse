@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Home | Nora En Pure</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    
+    <body>
+        <header class="header">
+            <div class="header__logoContainer">
+                <a href="./index.html">
+                    <img src="./images/noraenpure_logo_black.png" alt="Logo" class="header__logo">
+                </a>
+            </div>
+            <div class="header__icoMenuMobile">
+                <a href="javascript:void(0);" onclick="myFunction()">
+                    <img src="./images/icons/ico_mobile_menu.png" alt="Menu mobile">
+                </a>
+            </div>
+            <nav class="header__navMobile" id="navMobile">
+                <a href="./index.html">Home</a>
+                <a href="./views/tour.html">Tour</a>
+                <a href="./views/music.html">Musica</a>
+                <a href="./views/gallery.html">Galeria</a>
+                <a href="./views/contact.html">Contacto</a>
+            </nav>
+            <nav class="header__navDesktop">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./views/tour.html">Tour</a></li>
+                    <li><a href="./views/music.html">Musica</a></li>
+                    <li><a href="./views/gallery.html">Galeria</a></li>
+                    <li><a href="./views/contact.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <a id="topPage" class="topPageAnchor"></a>
+        
+        <div class="mainGrid">
+            <section class="bannerHome">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./images/banners/bannerPodcast.png" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/banners/banner01.jpg" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./images/banners/banner02.jpg" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </section>
+
+            <section class="sectionBgWhite">
+                <div class="centerDiv">
+                    <h2 class="tituloSeccion">Tour dates</h2>
+                    <table class="tourTable">
+                        <tr>
+                            <td class="numeroTourDate">16</td>
+                            <td class="fechaTourDate">
+                                Fri
+                                <br>
+                                Apr
+                            </td>
+                            <td class="nombreEventoTourDate">Sunbar Tempe - Tempe, AZ</td>
+                            <td class="buyTicket">
+                                <a class="buy" target="_blank" href="https://wl.seetickets.us/event/Nora-En-Pure/422288?afflky=RelentlessBeats">
+                                    <img src="./images/icons/ico_buy.png" alt="">Buy tickets
+                                </a>
+                                <a class="icoTicketMobile" target="_blank" href="https://wl.seetickets.us/event/Nora-En-Pure/422288?afflky=RelentlessBeats">
+                                    <img src="./images/icons/ticket.png" alt="ticket">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="numeroTourDate">17</td>
+                            <td class="fechaTourDate">
+                                Sat
+                                <br>
+                                Apr
+                            </td>
+                            <td class="nombreEventoTourDate">The Cuban Club - Tampa, FL</td>
+                            <td class="buyTicket">
+                                <a class="buy" target="_blank" href="https://www.eventbrite.com/e/shipwrecked-music-festival-tickets-94204290569?aff=aff0bandsintown&appId=JVK_aben-ra-cher&comeFrom=267&artist_event_id=1021682825">
+                                    <img src="./images/icons/ico_buy.png" alt="">Buy tickets
+                                </a>
+                                <a class="icoTicketMobile" target="_blank" href="https://www.eventbrite.com/e/shipwrecked-music-festival-tickets-94204290569?aff=aff0bandsintown&appId=JVK_aben-ra-cher&comeFrom=267&artist_event_id=1021682825">
+                                    <img src="./images/icons/ticket.png" alt="ticket">
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="showMore">
+                    <a href="./views/tour.html">Show all</a>
+                </div>
+            </section>
+
+            <section class="sectionMusicHome">
+                <div class="titleMusicHome">
+                    <h2 class="tituloSeccion">Last releases</h2>
+                </div>
+                <div class="homePhoto1">
+                    <a href="">
+                        <img class="miniAlbumHome" src="./images/music/01.jpg" alt="Album 01">
+                    </a>
+                </div>
+                <div class="homePhoto2">
+                    <a href="">
+                        <img class="miniAlbumHome" src="./images/music/03.jpg" alt="Album 02">
+                    </a>
+                </div>
+                <div class="homePhoto3">
+                    <a href="">
+                        <img class="miniAlbumHome" src="./images/music/05.jpg" alt="Album 03">
+                    </a>
+                </div>
+                <div class="homePhoto4">
+                    <a href="">
+                        <img class="miniAlbumHome" src="./images/music/07.jpg" alt="Album 04">
+                    </a>
+                </div>
+                <div class="showMore">
+                    <a href="./views/music.html">Show all</a>
+                </div> 
+            </section>
+            
+            <section class="sectionGalleryHome">
+                <div class="titleGalleryHome">
+                    <h2 class="tituloSeccion">Galeria</h2>
+                </div>
+
+                <div class="galleryHomePhoto1">
+                    <img class="miniCoverHome" src="./images/photos/mini001.png" alt="Foto 1">
+                </div>
+                <div class="galleryHomePhoto2">
+                    <img class="miniCoverHome" src="./images/photos/mini002.png" alt="Foto 2">
+                </div>
+                <div class="galleryHomePhoto3">
+                    <img class="miniCoverHome" src="./images/photos/mini003.png" alt="Foto 3">
+                </div>
+                <div class="galleryHomePhoto4">
+                    <img class="miniCoverHome" src="./images/photos/mini004.png" alt="Foto 4">
+                </div>
+                 
+                <div class="showMore">
+                    <a href="./views/gallery.html">Show all</a>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <img class="footer__logoFooter" src="./images/noraenpure_logo_big.png" alt="Logo">
+                <p class="footer__copyrightText">Copyright © 2021 / Sebastian Aranda</p>
+                <div class="footer__socialMediaContainer">
+                    <a target="_blank" href="https://www.facebook.com/NoraEnPure/">
+                        <img src="./images/icons/fb_gray.png" alt="">
+                    </a>
+                    <a target="_blank" href="https://www.instagram.com/noraenpure/">
+                        <img src="./images/icons/ig_gray.png" alt="">
+                    </a>
+                    <a target="_blank" href="https://twitter.com/NoraEnPure">
+                        <img src="./images/icons/tw_gray.png" alt="">
+                    </a>
+                    <a target="_blank" href="https://www.youtube.com/channel/UCdUXAN90UQV4sxNehj5Vflw">
+                        <img src="./images/icons/yt_gray.png" alt="">
+                    </a>
+                    <a target="_blank" href="https://open.spotify.com/artist/24DO0PijjITGIEWsO8XaPs">
+                        <img src="./images/icons/sp_gray.png" alt="">
+                    </a>
+                </div>
+                <div class="footer__upArrow">
+                    <a href="#topPage">
+                        <img src="./images/icons/up_arrow.png" alt="Icono para subir">
+                    </a>
+                </div>
+            </footer>
+        </div>
+
+        <script>
+            function myFunction() {
+                var x = document.getElementById("navMobile");
+                if (x.style.display === "grid") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "grid";
+                }
+            } 
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+    </body>
+</html>
