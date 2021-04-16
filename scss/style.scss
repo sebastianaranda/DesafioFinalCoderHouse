@@ -1,3 +1,13 @@
+@import "variables";
+
+@mixin miniPhotoAnimation($scale, $duration) {
+    transform: scale($scale);
+    transition-duration: $duration;
+}
+@mixin photoBrightnessFilter($percent) {
+    filter: brightness($percent);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -23,9 +33,6 @@ nav a{
 .topPageAnchor{
     top: 0;
     position: absolute;
-}
-.icoTicketMobile{
-    display: none;
 }
 ul{
     margin: 0;
@@ -71,8 +78,8 @@ ul{
         grid-column-start: 2;
     }
     &__logo{
-        height: 76px;
         width: 107px;
+        height: 76px;
     }
     &__icoMenuMobile{
         display: none;
@@ -81,33 +88,36 @@ ul{
         display: none;
     }
     &__navDesktop{
+        width: 100%;
         margin: 0;
         grid-column-start: 6;
         grid-column-end: 12;
-        width: 100%;
         ul{
+            height: 100px;
             display: flex;
             justify-content: space-between;
-            height: 100px;
             align-items: center;
         }
         li{
-            list-style: none;
             height: 60px;
+            list-style: none;
             padding-top: 40px;
-        }
-        li:hover{
-            transform: scale(1.10);
-            transition-duration: 100ms;
+            &:hover{
+                transform: scale(1.10);
+                transition-duration: 100ms;
+            }
         }
         a{
-            color: #000000;
+            color: $colorBlackLight;
             font-family: Poppins;
             font-style: normal;
             font-weight: 600;
             font-size: 16px;
             line-height: 0px;
             text-transform: uppercase;
+            &:hover{
+                color: $colorBlackDark;
+            }
         }
     }
 }
@@ -127,8 +137,8 @@ ul{
 
 /* ---------- EMPIEZA FOOTER SCSS ---------- */
 .footer{
-    background-color: #000000;
-    color: #FFFFFF;
+    background-color: $colorBlackDark;
+    color: $colorWhite;
     grid-area: footer;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -149,16 +159,16 @@ ul{
     &__copyrightText{
         font-family: Poppins;
         font-style: normal;
-        color: #D2D2D2;
+        color: $colorGrayLight;
         font-weight: 400;
         font-size: 15px;
         line-height: 27px;
         grid-area: copyright;
     }
     &__socialMediaContainer{
+        height: 40px;
         text-align: center;
         margin: auto;
-        height: 40px;
         grid-area: socialMedia;
         a{
             margin: 0px 15px;
@@ -184,104 +194,117 @@ ul{
 /* ---------- TERMINA BANNER ---------- */
 
 /* ---------- EMPIEZA SECCION TOUR EN HOME ---------- */
-.sectionBgWhite{
-    background-color: #FFFFFF;
+.sectionTour{
+    background-color: $colorWhite;
     grid-column-start: 2;
     grid-column-end: 12;
+    
 }
 .centerDiv{
-    text-align: center;
     width: 100%;
+    text-align: center;
     margin: auto;
 }
 .tituloSeccion{
     font-family: Poppins;
     font-style: normal;
-    color: #000000;
+    color: $colorBlackDark;
     font-weight: 600;
     font-size: 40px;
     text-align: left;
     margin-top: 30px;
     margin-bottom: 48px;
 }
-table{
+.tourTable{
     width: 100%;
     text-align: center;
-}
-.tourTable td{
-    border-bottom: 2px solid #F5F5F5;
-}
-.numeroTourDate{
-    font-family: Poppins;
-    font-style: normal;
-    color: #000000;
-    font-weight: 600;
-    font-size: 60px;
-    text-align: left;
-    width: 80px;
-}
-.fechaTourDate{
-    font-family: Poppins;
-    font-style: normal;
-    color: #000000;
-    font-weight: 400;
-    font-size: 20px;
-    text-align: center;
-    width: 50px;
-}
-.nombreEventoTourDate{
-    font-family: Poppins;
-    font-style: normal;
-    color: #000000;
-    font-weight: 600;
-    font-size: 21px;
-    text-align: left;
-    padding-left: 5%;
-}
-.buyTicket{
-    font-family: Poppins;
-    font-style: normal;
-    color: #000000;
-    font-weight: 600;
-    font-size: 12px;
-    text-align: right;
-}
-.buyTicket a{
-    text-decoration: none;
-    color: #000000;
-}
-.buyTicket img{
-    margin-right: 7px;
+    td{
+        border-bottom: 2px solid $colorTableBorder;
+    }
+    tr:hover{
+        transform: scale(1.01);
+        transition-duration: 100ms;
+    }
+    &__numeroTourDate{
+        width: 80px;
+        font-family: Poppins;
+        font-style: normal;
+        color: $colorBlackLight;
+        font-weight: 600;
+        font-size: 60px;
+        text-align: left;
+    }
+    &__fechaTourDate{
+        width: 50px;
+        font-family: Poppins;
+        font-style: normal;
+        color: $colorBlackLight;
+        font-weight: 400;
+        font-size: 20px;
+        text-align: center;
+    }
+    &__nombreEventoTourDate{
+        font-family: Poppins;
+        font-style: normal;
+        color: $colorBlackLight;
+        font-weight: 600;
+        font-size: 21px;
+        text-align: left;
+        padding-left: 5%;
+        &:hover{
+            color: $colorBlackDark;
+        }
+    }
+    &__buyTicket{
+        font-family: Poppins;
+        font-style: normal;
+        color: $colorBlackDark;
+        font-weight: 600;
+        font-size: 12px;
+        text-align: right;
+
+        a{
+            text-decoration: none;
+            color: $colorBlackLight;
+
+            &:hover{
+                color: $colorBlackDark;
+            }
+        }
+
+        img{
+            margin-right: 7px;
+        }
+    }
+    &__icoTicketMobile{
+        display: none;
+    }
 }
 /* ---------- TERMINA SECCION TOUR EN HOME ---------- */
 
 .showMore{
     text-align: center;
-    width: 100%;
-    margin: auto;
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.showMore a{
+.showMoreTitle{
     font-family: Poppins;
     font-style: normal;
-    color: #000000;
+    color: $colorBlackLight;
     font-weight: 600;
     font-size: 13px;
     text-decoration: none;
     text-transform: uppercase;
     text-align: center;
-}
 
-.tourTable tr:hover{
-    transform: scale(1.01);
-    transition-duration: 100ms;
+    &:hover{
+        color: $colorBlackDark;
+    }
 }
-
 
 /* ---------- EMPIEZA SECCION DE MUSICA EN HOME ---------- */
 .sectionMusicHome{
-    background-color: #F7F7F7;
+    background-color: $colorSectionBg;
     grid-area: music;
     display: grid;
     grid-template-columns: repeat(14, 1fr);
@@ -292,52 +315,59 @@ table{
                         "marginLeft photoLeft photoLeft photoLeft photoLeftMid photoLeftMid photoLeftMid photoRightMid photoRightMid photoRightMid photoRight photoRight photoRight marginRight"
                         "showMore showMore showMore showMore showMore showMore showMore showMore showMore showMore showMore showMore showMore showMore";
     align-items: center;
+
+    &__title{
+        grid-area: title;
+        grid-column-start: 2;
+
+        &--margin{
+            @extend .tituloSeccion;
+            margin: 0;
+            margin-top: 30px;
+            margin-bottom: 48px;
+        }
+    }
+    &__homePhoto{
+        &--1{
+            grid-area: photoLeft;
+            &:hover{
+                @include miniPhotoAnimation(1.2,250ms);
+            }
+        }
+        &--2{
+            grid-area: photoLeftMid;
+            &:hover{
+                @include miniPhotoAnimation(1.2,250ms);
+            }
+        }
+        &--3{
+            grid-area: photoRightMid;
+            &:hover{
+                @include miniPhotoAnimation(1.2,250ms);
+            }
+        }
+        &--4{
+            grid-area: photoRight;
+            &:hover{
+                @include miniPhotoAnimation(1.2,250ms);
+            }
+        }
+    }
+    &__miniAlbumHome{
+        width: 90%;
+        max-width: 310px;
+        margin-bottom: 14px;
+    }
+    &__showMore{
+        grid-area: showMore;
+        margin: auto;
+        margin-bottom: 16px;
+        a{
+            @extend .showMoreTitle;
+        }
+    }
 }
-.titleMusicHome{
-    grid-area: title;
-    grid-column-start: 2;
-}
-.titleMusicHome .tituloSeccion{
-    margin: 0;
-    margin-top: 30px;
-    margin-bottom: 48px;
-}
-.sectionMusicHome .showMore{
-    grid-area: showMore;
-}
-.homePhoto1{
-    grid-area: photoLeft;
-}
-.homePhoto1:hover{
-    transform: scale(1.2,1.2);
-    transition-duration: 500ms;
-}
-.homePhoto2{
-    grid-area: photoLeftMid;
-}
-.homePhoto2:hover{
-    transform: scale(1.2,1.2);
-    transition-duration: 500ms;
-}
-.homePhoto3{
-    grid-area: photoRightMid;
-}
-.homePhoto3:hover{
-    transform: scale(1.2,1.2);
-    transition-duration: 500ms;
-}
-.homePhoto4{
-    grid-area: photoRight;
-}
-.homePhoto4:hover{
-    transform: scale(1.2,1.2);
-    transition-duration: 500ms;
-}
-.miniAlbumHome{
-    width: 90%;
-    max-width: 310px;
-    margin-bottom: 14px;
-}
+
 /* ---------- TERMINA SECCION DE MUSICA EN HOME ---------- */
 
 
@@ -354,38 +384,60 @@ table{
                         "photoLeft photoLeft photoLeft photoLeftMid photoLeftMid photoLeftMid photoRightMid photoRightMid photoRightMid photoRight photoRight photoRight"
                         "showMore showMore showMore showMore showMore showMore showMore showMore showMore showMore showMore showMore";
     align-items: center;
-}
-.sectionGalleryHome img:hover{
-    transform: scale(1.1,1.1);
-    transition-duration: 250ms;
-}
-.titleGalleryHome{
-    grid-area: title;
-    grid-column-start: 2;
 
-}
-.titleGalleryHome .tituloSeccion{
-    margin: 0;
-    margin-top: 30px;
-    margin-bottom: 48px;
-}
-.galleryHomePhoto1{
-    grid-area: photoLeft;
-}
-.galleryHomePhoto2{
-    grid-area: photoLeftMid;
-}
-.galleryHomePhoto3{
-    grid-area: photoRightMid;
-}
-.galleryHomePhoto4{
-    grid-area: photoRight;
-}
-.miniCoverHome{
-    width: 100%;
-}
-.sectionGalleryHome .showMore{
-    grid-area: showMore;
+    &__title{
+        grid-area: title;
+        grid-column-start: 2;
+
+        &--margin{
+            @extend .tituloSeccion;       
+            margin: 0;
+            margin-top: 30px;
+            margin-bottom: 48px;
+        }
+    }
+    &__photo{
+        &--1{
+            grid-area: photoLeft;
+            filter: brightness(70%);
+            &:hover{
+                @include photoBrightnessFilter(100%);
+            }
+        }
+        &--2{
+            grid-area: photoLeftMid;
+            filter: brightness(70%);
+            &:hover{
+                @include photoBrightnessFilter(100%);
+            }
+        }
+        &--3{
+            grid-area: photoRightMid;
+            filter: brightness(70%);
+            &:hover{
+                @include photoBrightnessFilter(100%);
+            }
+        }
+        &--4{
+            grid-area: photoRight;
+            filter: brightness(70%);
+            &:hover{
+                @include photoBrightnessFilter(100%);
+            }
+        }
+    }
+    &__miniCover{
+        width: 100%;
+    }
+    &__showMore{
+        grid-area: showMore;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        a{
+            @extend .showMoreTitle;
+        }
+    }
 }
 /* ---------- TERMINA SECCION DE GALERIA EN HOME ---------- */
 
@@ -422,7 +474,7 @@ table{
 }
 
 .sectionDiscography{
-    background-color: #F7F7F7;
+    background-color: $colorSectionBg;
     grid-area: discography;
     display: grid;
     grid-template-columns: repeat(14, 1fr);
@@ -506,7 +558,7 @@ section a{
     clear: both;
 }
 .emailContact{
-    color: #000000;
+    color: $colorBlackLight;
     font-weight: 600;
     font-size: 21px;
     text-decoration: none;
@@ -520,8 +572,8 @@ section a{
     font-weight: 600;
     font-size: 16px;
     line-height: 24px;
-    background: #000000;
-    color: #FFFFFF;
+    background: $colorBlackLight;
+    color: $colorWhite;
     border-radius: 5px;
 }
 
@@ -542,18 +594,16 @@ section a{
 form fieldset label{
     font-size: 24px;
     font-weight: 600;
-    color: #000000;
+    color: $colorBlackLight;
 }
 
 .mainContainer{
-    /* z-index: -1;
-    position: relative; */
     margin-top: 100px;
 }
 
 .centerTwoDiv{
-    text-align: center;
     max-width: 650px;
+    text-align: center;
     margin: auto;
 }
 
@@ -584,16 +634,16 @@ form fieldset label{
 
 .miniCoverReleases{
     width: 90%;
-    margin-bottom: 15px;
     max-width: 190px;
+    margin-bottom: 15px;
 }
 
 .coverAlbums{
     width: 250px;
     height: 250px;
-    margin-left: 30px;
     margin-right: 30px;
     margin-bottom: 50px;
+    margin-left: 30px;
 }
 
 .miniPhotoGallery{
@@ -609,8 +659,8 @@ form fieldset label{
 }
 
 .centerAllWidht{
-    text-align: center;
     width: 100%;
+    text-align: center;
 }
 
 .socialMediaContact{
@@ -628,13 +678,11 @@ form fieldset label{
 }
 
 .formContact input, select, textarea{
-    margin: 0px;
-    padding: 0px;
     width: 50%;
+    padding: 0px;
+    margin: 0px;
     margin-right: 30px;
 }
-
-
 
 /* ---------- BOOTSTRAP ---------- */
 #containerReleasesAndSpotify{
@@ -679,7 +727,6 @@ form fieldset label{
 
 .socialMediaIcons{
     margin-top: 20px;
-
     a{
         margin: 0px 15px;
     }
@@ -702,7 +749,7 @@ form fieldset label{
 
 form label{
     padding-right: 16px;
-    color: #000000;
+    color: $colorBlackDark;
     font-weight: 600;
     font-size: 21px;
     text-decoration: none;
@@ -733,17 +780,16 @@ form label{
             grid-column-start: 2;
         }
         &__navMobile{
-            grid-template-columns: repeat(12, 1fr);
-            column-gap: 20px;
-            background-color: #FFFFFF;
             width: 100%;
             height: 220px;
+            grid-template-columns: repeat(12, 1fr);
+            column-gap: 20px;
+            background-color: $colorWhite;
             position: fixed;
             top: 100px;
             align-content: space-between;
-
             a{
-                color: #000000;
+                color: $colorBlackLight;
                 font-family: Poppins;
                 font-style: normal;
                 font-weight: 600;
@@ -756,9 +802,10 @@ form label{
                 padding-top: 8px;
                 padding-bottom: 8px;
                 padding-left: 10%;
-            }
-            a:hover{
-                background-color: #F5F5F5;
+                &:hover{
+                    color: $colorBlackDark;
+                    background-color: $colorSectionBg;
+                }
             }
         }
     }
@@ -770,46 +817,68 @@ form label{
                             "marginLeftUp photoLeftUp photoLeftUp photoLeftUp photoLeftUp photoLeftUp photoLeftUp photoRightUp photoRightUp photoRightUp photoRightUp photoRightUp photoRightUp marginRightUp"
                             "marginLeftDown photoLeftDown photoLeftDown photoLeftDown photoLeftDown photoLeftDown photoLeftDown photoRightDown photoRightDown photoRightDown photoRightDown photoRightDown photoRightDown marginRightDown"
                             "showMore showMore showMore showMore showMore showMore showMore showMore showMore showMore showMore showMore showMore showMore";
+        &__title{
+            &--margin{
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+        &__homePhoto{
+            &--1{
+                grid-area: photoLeftUp;
+                &:hover{
+                    @include miniPhotoAnimation(1.1, 250ms);
+                }
+            }
+            &--2{
+                grid-area: photoRightUp;
+                &:hover{
+                    @include miniPhotoAnimation(1.1, 250ms);
+                }
+            }
+            &--3{
+                grid-area: photoLeftDown;
+                &:hover{
+                    @include miniPhotoAnimation(1.1, 250ms);
+                }
+            }
+            &--4{
+                grid-area: photoRightDown;
+                &:hover{
+                    @include miniPhotoAnimation(1.1, 250ms);
+                }
+            }
+        }
     }
-    .titleMusicHome .tituloSeccion{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-    .homePhoto1{
-        grid-area: photoLeftUp;
-    }
-    .homePhoto2{
-        grid-area: photoRightUp;
-    }
-    .homePhoto3{
-        grid-area: photoLeftDown;
-    }
-    .homePhoto4{
-        grid-area: photoRightDown;
-    }
+
     .sectionGalleryHome{
         grid-template-areas:
                             "title title title title title title title title title title title title"
                             "photoLeftUp photoLeftUp photoLeftUp photoLeftUp photoLeftUp photoLeftUp photoRightUp photoRightUp photoRightUp photoRightUp photoRightUp photoRightUp"
                             "photoLeftDown photoLeftDown photoLeftDown photoLeftDown photoLeftDown photoLeftDown photoRightDown photoRightDown photoRightDown photoRightDown photoRightDown photoRightDown"
                             "showMore showMore showMore showMore showMore showMore showMore showMore showMore showMore showMore showMore";
+        &__title{
+            &--margin{
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+        }
+        &__photo{
+            &--1{
+                grid-area: photoLeftUp;
+            }
+            &--2{
+                grid-area: photoRightUp;
+            }
+            &--3{
+                grid-area: photoLeftDown;
+            }
+            &--4{
+                grid-area: photoRightDown;
+            }
+        }
     }
-    .galleryHomePhoto1{
-        grid-area: photoLeftUp;
-    }
-    .galleryHomePhoto2{
-        grid-area: photoRightUp;
-    }
-    .galleryHomePhoto3{
-        grid-area: photoLeftDown;
-    }
-    .galleryHomePhoto4{
-        grid-area: photoRightDown;
-    }
-    .titleGalleryHome .tituloSeccion{
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
+
     .footer{
         grid-template-columns: repeat(5, 1fr);
         grid-template-areas:
@@ -817,17 +886,43 @@ form label{
                             "copyright copyright copyright copyright copyright"
                             "socialMedia socialMedia socialMedia socialMedia socialMedia";
     }
+
+    .tourTable{
+        &__numeroTourDate{
+            width: 10%;
+            font-size: 30px;
+        }
+        &__fechaTourDate{
+            width: 15%;
+            font-size: 16px;
+        }
+        &__nombreEventoTourDate{
+            width: 65%;
+            font-size: 18px;
+            padding: 0;
+            line-height: 20px;
+        }
+        &__buyTicket{
+            width: auto;
+            text-align: right;
+            img{
+                margin: auto;
+            }
+        }
+        &__buyDesktop{
+            display: none;
+        }
+        &__icoTicketMobile{
+            display: block;
+        }
+    }
 }
-
-
-
 
 
 @media only screen and (max-width: 425px){
     .header{
         grid-template-columns: repeat(5, 1fr);
         grid-template-areas: "nav logo logo logo empty";
-
         &__icoMenuMobile{
             grid-area: nav;
         }
@@ -841,45 +936,45 @@ form label{
                             "music music music music music music music music"
                             "gallery gallery gallery gallery gallery gallery gallery gallery"
                             "footer footer footer footer footer footer footer footer";
-                            column-gap: 10px;
+        column-gap: 10px;
     }
-    .sectionBgWhite{
+    .sectionTour{
         grid-area: tour;
     }
-    .sectionBgWhite .tituloSeccion{
-        margin-left: 10%;
+    .sectionTour .tituloSeccion{
         margin-top: 20px;
         margin-bottom: 20px;
-    }
-    .buy{
-        display: none;
-    }
-    .icoTicketMobile{
-        display: block;
+        margin-left: 10%;
     }
     .tourTable{
         width: 80%;
         margin: auto;
-    }
-    .numeroTourDate{
-        font-size: 30px;
-        width: 15%;
-    }
-    .fechaTourDate{
-        width: 15%;
-        font-size: 15px;
-    }
-    .nombreEventoTourDate{
-        width: 55%;
-        font-size: 16px;
-        padding: 0;
-        line-height: 20px;
-    }
-    .buyTicket{
-        width: auto;
-        text-align: right;
-    }
-    .buyTicket img{
-        margin: auto;
+        &__numeroTourDate{
+            width: 10%;
+            font-size: 20px;
+        }
+        &__fechaTourDate{
+            width: 15%;
+            font-size: 14px;
+        }
+        &__nombreEventoTourDate{
+            width: 65%;
+            font-size: 14px;
+            padding: 0;
+            line-height: 20px;
+        }
+        &__buyTicket{
+            width: auto;
+            text-align: right;
+            img{
+                margin: auto;
+            }
+        }
+        &__buyDesktop{
+            display: none;
+        }
+        &__icoTicketMobile{
+            display: block;
+        }
     }
 }

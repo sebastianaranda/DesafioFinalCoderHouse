@@ -24,9 +24,6 @@ nav a {
   top: 0;
   position: absolute; }
 
-.icoTicketMobile {
-  display: none; }
-
 ul {
   margin: 0;
   padding: 0; }
@@ -62,37 +59,39 @@ ul {
     grid-area: logo;
     grid-column-start: 2; }
   .header__logo {
-    height: 76px;
-    width: 107px; }
+    width: 107px;
+    height: 76px; }
   .header__icoMenuMobile {
     display: none; }
   .header__navMobile {
     display: none; }
   .header__navDesktop {
+    width: 100%;
     margin: 0;
     grid-column-start: 6;
-    grid-column-end: 12;
-    width: 100%; }
+    grid-column-end: 12; }
     .header__navDesktop ul {
+      height: 100px;
       display: flex;
       justify-content: space-between;
-      height: 100px;
       align-items: center; }
     .header__navDesktop li {
-      list-style: none;
       height: 60px;
+      list-style: none;
       padding-top: 40px; }
-    .header__navDesktop li:hover {
-      transform: scale(1.1);
-      transition-duration: 100ms; }
+      .header__navDesktop li:hover {
+        transform: scale(1.1);
+        transition-duration: 100ms; }
     .header__navDesktop a {
-      color: #000000;
+      color: #333333;
       font-family: Poppins;
       font-style: normal;
       font-weight: 600;
       font-size: 16px;
       line-height: 0px;
       text-transform: uppercase; }
+      .header__navDesktop a:hover {
+        color: #000000; }
 
 /* ---------- TERMINA HEADER SCSS ---------- */
 /* ---------- COMIENZA BANNER SCSS ---------- */
@@ -130,9 +129,9 @@ ul {
     line-height: 27px;
     grid-area: copyright; }
   .footer__socialMediaContainer {
+    height: 40px;
     text-align: center;
     margin: auto;
-    height: 40px;
     grid-area: socialMedia; }
     .footer__socialMediaContainer a {
       margin: 0px 15px; }
@@ -151,17 +150,17 @@ ul {
 
 /* ---------- TERMINA BANNER ---------- */
 /* ---------- EMPIEZA SECCION TOUR EN HOME ---------- */
-.sectionBgWhite {
+.sectionTour {
   background-color: #FFFFFF;
   grid-column-start: 2;
   grid-column-end: 12; }
 
 .centerDiv {
-  text-align: center;
   width: 100%;
+  text-align: center;
   margin: auto; }
 
-.tituloSeccion {
+.tituloSeccion, .sectionMusicHome__title--margin, .sectionGalleryHome__title--margin {
   font-family: Poppins;
   font-style: normal;
   color: #000000;
@@ -171,76 +170,74 @@ ul {
   margin-top: 30px;
   margin-bottom: 48px; }
 
-table {
+.tourTable {
   width: 100%;
   text-align: center; }
-
-.tourTable td {
-  border-bottom: 2px solid #F5F5F5; }
-
-.numeroTourDate {
-  font-family: Poppins;
-  font-style: normal;
-  color: #000000;
-  font-weight: 600;
-  font-size: 60px;
-  text-align: left;
-  width: 80px; }
-
-.fechaTourDate {
-  font-family: Poppins;
-  font-style: normal;
-  color: #000000;
-  font-weight: 400;
-  font-size: 20px;
-  text-align: center;
-  width: 50px; }
-
-.nombreEventoTourDate {
-  font-family: Poppins;
-  font-style: normal;
-  color: #000000;
-  font-weight: 600;
-  font-size: 21px;
-  text-align: left;
-  padding-left: 5%; }
-
-.buyTicket {
-  font-family: Poppins;
-  font-style: normal;
-  color: #000000;
-  font-weight: 600;
-  font-size: 12px;
-  text-align: right; }
-
-.buyTicket a {
-  text-decoration: none;
-  color: #000000; }
-
-.buyTicket img {
-  margin-right: 7px; }
+  .tourTable td {
+    border-bottom: 2px solid #F5F5F5; }
+  .tourTable tr:hover {
+    transform: scale(1.01);
+    transition-duration: 100ms; }
+  .tourTable__numeroTourDate {
+    width: 80px;
+    font-family: Poppins;
+    font-style: normal;
+    color: #333333;
+    font-weight: 600;
+    font-size: 60px;
+    text-align: left; }
+  .tourTable__fechaTourDate {
+    width: 50px;
+    font-family: Poppins;
+    font-style: normal;
+    color: #333333;
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center; }
+  .tourTable__nombreEventoTourDate {
+    font-family: Poppins;
+    font-style: normal;
+    color: #333333;
+    font-weight: 600;
+    font-size: 21px;
+    text-align: left;
+    padding-left: 5%; }
+    .tourTable__nombreEventoTourDate:hover {
+      color: #000000; }
+  .tourTable__buyTicket {
+    font-family: Poppins;
+    font-style: normal;
+    color: #000000;
+    font-weight: 600;
+    font-size: 12px;
+    text-align: right; }
+    .tourTable__buyTicket a {
+      text-decoration: none;
+      color: #333333; }
+      .tourTable__buyTicket a:hover {
+        color: #000000; }
+    .tourTable__buyTicket img {
+      margin-right: 7px; }
+  .tourTable__icoTicketMobile {
+    display: none; }
 
 /* ---------- TERMINA SECCION TOUR EN HOME ---------- */
 .showMore {
   text-align: center;
-  width: 100%;
-  margin: auto;
   margin-top: 20px;
   margin-bottom: 20px; }
 
-.showMore a {
+.showMoreTitle, .sectionMusicHome__showMore a, .sectionGalleryHome__showMore a {
   font-family: Poppins;
   font-style: normal;
-  color: #000000;
+  color: #333333;
   font-weight: 600;
   font-size: 13px;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center; }
-
-.tourTable tr:hover {
-  transform: scale(1.01);
-  transition-duration: 100ms; }
+  .showMoreTitle:hover, .sectionMusicHome__showMore a:hover, .sectionGalleryHome__showMore a:hover {
+    color: #000000; }
 
 /* ---------- EMPIEZA SECCION DE MUSICA EN HOME ---------- */
 .sectionMusicHome {
@@ -252,51 +249,41 @@ table {
   column-gap: 20px;
   grid-template-areas: "title title title title title title title title title title title title title title" "marginLeft photoLeft photoLeft photoLeft photoLeftMid photoLeftMid photoLeftMid photoRightMid photoRightMid photoRightMid photoRight photoRight photoRight marginRight" "showMore showMore showMore showMore showMore showMore showMore showMore showMore showMore showMore showMore showMore showMore";
   align-items: center; }
-
-.titleMusicHome {
-  grid-area: title;
-  grid-column-start: 2; }
-
-.titleMusicHome .tituloSeccion {
-  margin: 0;
-  margin-top: 30px;
-  margin-bottom: 48px; }
-
-.sectionMusicHome .showMore {
-  grid-area: showMore; }
-
-.homePhoto1 {
-  grid-area: photoLeft; }
-
-.homePhoto1:hover {
-  transform: scale(1.2, 1.2);
-  transition-duration: 500ms; }
-
-.homePhoto2 {
-  grid-area: photoLeftMid; }
-
-.homePhoto2:hover {
-  transform: scale(1.2, 1.2);
-  transition-duration: 500ms; }
-
-.homePhoto3 {
-  grid-area: photoRightMid; }
-
-.homePhoto3:hover {
-  transform: scale(1.2, 1.2);
-  transition-duration: 500ms; }
-
-.homePhoto4 {
-  grid-area: photoRight; }
-
-.homePhoto4:hover {
-  transform: scale(1.2, 1.2);
-  transition-duration: 500ms; }
-
-.miniAlbumHome {
-  width: 90%;
-  max-width: 310px;
-  margin-bottom: 14px; }
+  .sectionMusicHome__title {
+    grid-area: title;
+    grid-column-start: 2; }
+    .sectionMusicHome__title--margin {
+      margin: 0;
+      margin-top: 30px;
+      margin-bottom: 48px; }
+  .sectionMusicHome__homePhoto--1 {
+    grid-area: photoLeft; }
+    .sectionMusicHome__homePhoto--1:hover {
+      transform: scale(1.2);
+      transition-duration: 250ms; }
+  .sectionMusicHome__homePhoto--2 {
+    grid-area: photoLeftMid; }
+    .sectionMusicHome__homePhoto--2:hover {
+      transform: scale(1.2);
+      transition-duration: 250ms; }
+  .sectionMusicHome__homePhoto--3 {
+    grid-area: photoRightMid; }
+    .sectionMusicHome__homePhoto--3:hover {
+      transform: scale(1.2);
+      transition-duration: 250ms; }
+  .sectionMusicHome__homePhoto--4 {
+    grid-area: photoRight; }
+    .sectionMusicHome__homePhoto--4:hover {
+      transform: scale(1.2);
+      transition-duration: 250ms; }
+  .sectionMusicHome__miniAlbumHome {
+    width: 90%;
+    max-width: 310px;
+    margin-bottom: 14px; }
+  .sectionMusicHome__showMore {
+    grid-area: showMore;
+    margin: auto;
+    margin-bottom: 16px; }
 
 /* ---------- TERMINA SECCION DE MUSICA EN HOME ---------- */
 /* ---------- EMPIEZA SECCION DE GALERIA EN HOME ---------- */
@@ -307,37 +294,40 @@ table {
   grid-template-rows: auto auto auto;
   grid-template-areas: "title title title title title title title title title title title title" "photoLeft photoLeft photoLeft photoLeftMid photoLeftMid photoLeftMid photoRightMid photoRightMid photoRightMid photoRight photoRight photoRight" "showMore showMore showMore showMore showMore showMore showMore showMore showMore showMore showMore showMore";
   align-items: center; }
-
-.sectionGalleryHome img:hover {
-  transform: scale(1.1, 1.1);
-  transition-duration: 250ms; }
-
-.titleGalleryHome {
-  grid-area: title;
-  grid-column-start: 2; }
-
-.titleGalleryHome .tituloSeccion {
-  margin: 0;
-  margin-top: 30px;
-  margin-bottom: 48px; }
-
-.galleryHomePhoto1 {
-  grid-area: photoLeft; }
-
-.galleryHomePhoto2 {
-  grid-area: photoLeftMid; }
-
-.galleryHomePhoto3 {
-  grid-area: photoRightMid; }
-
-.galleryHomePhoto4 {
-  grid-area: photoRight; }
-
-.miniCoverHome {
-  width: 100%; }
-
-.sectionGalleryHome .showMore {
-  grid-area: showMore; }
+  .sectionGalleryHome__title {
+    grid-area: title;
+    grid-column-start: 2; }
+    .sectionGalleryHome__title--margin {
+      margin: 0;
+      margin-top: 30px;
+      margin-bottom: 48px; }
+  .sectionGalleryHome__photo--1 {
+    grid-area: photoLeft;
+    filter: brightness(70%); }
+    .sectionGalleryHome__photo--1:hover {
+      filter: brightness(100%); }
+  .sectionGalleryHome__photo--2 {
+    grid-area: photoLeftMid;
+    filter: brightness(70%); }
+    .sectionGalleryHome__photo--2:hover {
+      filter: brightness(100%); }
+  .sectionGalleryHome__photo--3 {
+    grid-area: photoRightMid;
+    filter: brightness(70%); }
+    .sectionGalleryHome__photo--3:hover {
+      filter: brightness(100%); }
+  .sectionGalleryHome__photo--4 {
+    grid-area: photoRight;
+    filter: brightness(70%); }
+    .sectionGalleryHome__photo--4:hover {
+      filter: brightness(100%); }
+  .sectionGalleryHome__miniCover {
+    width: 100%; }
+  .sectionGalleryHome__showMore {
+    grid-area: showMore;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px; }
 
 /* ---------- TERMINA SECCION DE GALERIA EN HOME ---------- */
 /* ---------- COMIENZA GRID VISTA TOUR ---------- */
@@ -373,14 +363,14 @@ table {
   align-items: center;
   margin-bottom: 40px; }
 
-.sectionDiscography .tituloSeccion {
+.sectionDiscography .tituloSeccion, .sectionDiscography .sectionMusicHome__title--margin, .sectionDiscography .sectionGalleryHome__title--margin {
   grid-area: title;
   margin-bottom: 28px; }
 
-.lastReleases .tituloSeccion {
+.lastReleases .tituloSeccion, .lastReleases .sectionMusicHome__title--margin, .lastReleases .sectionGalleryHome__title--margin {
   grid-area: title; }
 
-.spotify .tituloSeccion {
+.spotify .tituloSeccion, .spotify .sectionMusicHome__title--margin, .spotify .sectionGalleryHome__title--margin {
   grid-area: title; }
 
 .spotifyPlayer {
@@ -401,7 +391,7 @@ table {
   grid-area: images;
   padding: 0; }
 
-#containerGalleryPhotos .tituloSeccion {
+#containerGalleryPhotos .tituloSeccion, #containerGalleryPhotos .sectionMusicHome__title--margin, #containerGalleryPhotos .sectionGalleryHome__title--margin {
   margin-left: 10%; }
 
 #containerGalleryVideos {
@@ -431,7 +421,7 @@ section a {
   clear: both; }
 
 .emailContact {
-  color: #000000;
+  color: #333333;
   font-weight: 600;
   font-size: 21px;
   text-decoration: none;
@@ -445,7 +435,7 @@ section a {
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
-  background: #000000;
+  background: #333333;
   color: #FFFFFF;
   border-radius: 5px; }
 
@@ -464,16 +454,14 @@ section a {
 form fieldset label {
   font-size: 24px;
   font-weight: 600;
-  color: #000000; }
+  color: #333333; }
 
 .mainContainer {
-  /* z-index: -1;
-    position: relative; */
   margin-top: 100px; }
 
 .centerTwoDiv {
-  text-align: center;
   max-width: 650px;
+  text-align: center;
   margin: auto; }
 
 .lastReleases {
@@ -496,15 +484,15 @@ form fieldset label {
 
 .miniCoverReleases {
   width: 90%;
-  margin-bottom: 15px;
-  max-width: 190px; }
+  max-width: 190px;
+  margin-bottom: 15px; }
 
 .coverAlbums {
   width: 250px;
   height: 250px;
-  margin-left: 30px;
   margin-right: 30px;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  margin-left: 30px; }
 
 .miniPhotoGallery {
   width: 100%;
@@ -517,8 +505,8 @@ form fieldset label {
   margin-bottom: 30px; }
 
 .centerAllWidht {
-  text-align: center;
-  width: 100%; }
+  width: 100%;
+  text-align: center; }
 
 .socialMediaContact {
   width: 40%;
@@ -533,9 +521,9 @@ form fieldset label {
   text-align: right; }
 
 .formContact input, select, textarea {
-  margin: 0px;
-  padding: 0px;
   width: 50%;
+  padding: 0px;
+  margin: 0px;
   margin-right: 30px; }
 
 /* ---------- BOOTSTRAP ---------- */
@@ -616,16 +604,16 @@ form label {
       display: block;
       grid-column-start: 2; }
     .header__navMobile {
+      width: 100%;
+      height: 220px;
       grid-template-columns: repeat(12, 1fr);
       column-gap: 20px;
       background-color: #FFFFFF;
-      width: 100%;
-      height: 220px;
       position: fixed;
       top: 100px;
       align-content: space-between; }
       .header__navMobile a {
-        color: #000000;
+        color: #333333;
         font-family: Poppins;
         font-style: normal;
         font-weight: 600;
@@ -638,38 +626,71 @@ form label {
         padding-top: 8px;
         padding-bottom: 8px;
         padding-left: 10%; }
-      .header__navMobile a:hover {
-        background-color: #F5F5F5; }
+        .header__navMobile a:hover {
+          color: #000000;
+          background-color: #F7F7F7; }
   .sectionMusicHome {
     grid-template-rows: auto auto auto auto;
     grid-template-areas: "title title title title title title title title title title title title title title" "marginLeftUp photoLeftUp photoLeftUp photoLeftUp photoLeftUp photoLeftUp photoLeftUp photoRightUp photoRightUp photoRightUp photoRightUp photoRightUp photoRightUp marginRightUp" "marginLeftDown photoLeftDown photoLeftDown photoLeftDown photoLeftDown photoLeftDown photoLeftDown photoRightDown photoRightDown photoRightDown photoRightDown photoRightDown photoRightDown marginRightDown" "showMore showMore showMore showMore showMore showMore showMore showMore showMore showMore showMore showMore showMore showMore"; }
-  .titleMusicHome .tituloSeccion {
-    margin-top: 20px;
-    margin-bottom: 20px; }
-  .homePhoto1 {
-    grid-area: photoLeftUp; }
-  .homePhoto2 {
-    grid-area: photoRightUp; }
-  .homePhoto3 {
-    grid-area: photoLeftDown; }
-  .homePhoto4 {
-    grid-area: photoRightDown; }
+    .sectionMusicHome__title--margin {
+      margin-top: 20px;
+      margin-bottom: 20px; }
+    .sectionMusicHome__homePhoto--1 {
+      grid-area: photoLeftUp; }
+      .sectionMusicHome__homePhoto--1:hover {
+        transform: scale(1.1);
+        transition-duration: 250ms; }
+    .sectionMusicHome__homePhoto--2 {
+      grid-area: photoRightUp; }
+      .sectionMusicHome__homePhoto--2:hover {
+        transform: scale(1.1);
+        transition-duration: 250ms; }
+    .sectionMusicHome__homePhoto--3 {
+      grid-area: photoLeftDown; }
+      .sectionMusicHome__homePhoto--3:hover {
+        transform: scale(1.1);
+        transition-duration: 250ms; }
+    .sectionMusicHome__homePhoto--4 {
+      grid-area: photoRightDown; }
+      .sectionMusicHome__homePhoto--4:hover {
+        transform: scale(1.1);
+        transition-duration: 250ms; }
   .sectionGalleryHome {
     grid-template-areas: "title title title title title title title title title title title title" "photoLeftUp photoLeftUp photoLeftUp photoLeftUp photoLeftUp photoLeftUp photoRightUp photoRightUp photoRightUp photoRightUp photoRightUp photoRightUp" "photoLeftDown photoLeftDown photoLeftDown photoLeftDown photoLeftDown photoLeftDown photoRightDown photoRightDown photoRightDown photoRightDown photoRightDown photoRightDown" "showMore showMore showMore showMore showMore showMore showMore showMore showMore showMore showMore showMore"; }
-  .galleryHomePhoto1 {
-    grid-area: photoLeftUp; }
-  .galleryHomePhoto2 {
-    grid-area: photoRightUp; }
-  .galleryHomePhoto3 {
-    grid-area: photoLeftDown; }
-  .galleryHomePhoto4 {
-    grid-area: photoRightDown; }
-  .titleGalleryHome .tituloSeccion {
-    margin-top: 20px;
-    margin-bottom: 20px; }
+    .sectionGalleryHome__title--margin {
+      margin-top: 20px;
+      margin-bottom: 20px; }
+    .sectionGalleryHome__photo--1 {
+      grid-area: photoLeftUp; }
+    .sectionGalleryHome__photo--2 {
+      grid-area: photoRightUp; }
+    .sectionGalleryHome__photo--3 {
+      grid-area: photoLeftDown; }
+    .sectionGalleryHome__photo--4 {
+      grid-area: photoRightDown; }
   .footer {
     grid-template-columns: repeat(5, 1fr);
-    grid-template-areas: "margin logo logo logo upArrow" "copyright copyright copyright copyright copyright" "socialMedia socialMedia socialMedia socialMedia socialMedia"; } }
+    grid-template-areas: "margin logo logo logo upArrow" "copyright copyright copyright copyright copyright" "socialMedia socialMedia socialMedia socialMedia socialMedia"; }
+  .tourTable__numeroTourDate {
+    width: 10%;
+    font-size: 30px; }
+  .tourTable__fechaTourDate {
+    width: 15%;
+    font-size: 16px; }
+  .tourTable__nombreEventoTourDate {
+    width: 65%;
+    font-size: 18px;
+    padding: 0;
+    line-height: 20px; }
+  .tourTable__buyTicket {
+    width: auto;
+    text-align: right; }
+    .tourTable__buyTicket img {
+      margin: auto; }
+  .tourTable__buyDesktop {
+    display: none; }
+  .tourTable__icoTicketMobile {
+    display: block; } }
 
 @media only screen and (max-width: 425px) {
   .header {
@@ -681,32 +702,32 @@ form label {
     grid-template-columns: repeat(8, 1fr);
     grid-template-areas: "banner banner banner banner banner banner banner banner" "tour tour tour tour tour tour tour tour" "music music music music music music music music" "gallery gallery gallery gallery gallery gallery gallery gallery" "footer footer footer footer footer footer footer footer";
     column-gap: 10px; }
-  .sectionBgWhite {
+  .sectionTour {
     grid-area: tour; }
-  .sectionBgWhite .tituloSeccion {
-    margin-left: 10%;
+  .sectionTour .tituloSeccion, .sectionTour .sectionMusicHome__title--margin, .sectionTour .sectionGalleryHome__title--margin {
     margin-top: 20px;
-    margin-bottom: 20px; }
-  .buy {
-    display: none; }
-  .icoTicketMobile {
-    display: block; }
+    margin-bottom: 20px;
+    margin-left: 10%; }
   .tourTable {
     width: 80%;
     margin: auto; }
-  .numeroTourDate {
-    font-size: 30px;
-    width: 15%; }
-  .fechaTourDate {
-    width: 15%;
-    font-size: 15px; }
-  .nombreEventoTourDate {
-    width: 55%;
-    font-size: 16px;
-    padding: 0;
-    line-height: 20px; }
-  .buyTicket {
-    width: auto;
-    text-align: right; }
-  .buyTicket img {
-    margin: auto; } }
+    .tourTable__numeroTourDate {
+      width: 10%;
+      font-size: 20px; }
+    .tourTable__fechaTourDate {
+      width: 15%;
+      font-size: 14px; }
+    .tourTable__nombreEventoTourDate {
+      width: 65%;
+      font-size: 14px;
+      padding: 0;
+      line-height: 20px; }
+    .tourTable__buyTicket {
+      width: auto;
+      text-align: right; }
+      .tourTable__buyTicket img {
+        margin: auto; }
+    .tourTable__buyDesktop {
+      display: none; }
+    .tourTable__icoTicketMobile {
+      display: block; } }
