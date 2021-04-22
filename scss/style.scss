@@ -45,11 +45,12 @@ ul{
     width: 100%;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: auto 430px auto auto 313px;
+    grid-template-rows: auto auto 430px auto auto 313px;
     column-gap: 20px;
     margin-top: 100px;
     grid-template-areas:
                         "banner banner banner banner banner banner banner banner banner banner banner banner"
+                        "bio bio bio bio bio bio bio bio bio bio bio bio"
                         "tour tour tour tour tour tour tour tour tour tour tour tour"
                         "music music music music music music music music music music music music"
                         "gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery gallery"
@@ -182,6 +183,42 @@ ul{
         grid-area: upArrow;
     }
 }
+
+.bio{
+    grid-area: bio;
+    grid-column-end: 12;
+    margin-bottom: 30px;
+
+    &__photo{
+        max-width: 80%;
+        margin: auto;
+        margin-top: 130px;
+    }
+    &__titulo{
+        @extend .tituloSeccion;
+
+        &--normal{
+            font-weight: 400;
+            color: $colorBlackLight;
+        }
+    }
+    &__texto{
+        font-family: Poppins;
+        font-weight: 400;
+        color: $colorBlackDark;
+        font-size: 14px;
+
+        &--italic{
+            font-style: italic;
+        }
+        &--bold{
+            font-weight: 600;
+        }
+    }
+}
+
+
+
 
 .sectionTour{
     background-color: $colorWhite;
@@ -629,8 +666,21 @@ form label{
 
 @media only screen and (max-width: 768px){
     .mainGrid{
-        grid-template-rows: auto auto auto auto 313px;
+        grid-template-rows: auto auto auto auto auto 313px;
     }
+
+    .bio{
+        grid-column-start: 2;
+
+        &__photo{
+            margin-top: 12px;
+        }
+        &__titulo{
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    }
+
     .header{
         grid-template-areas: "nav nav nav nav logo logo logo logo empty empty empty empty";
         justify-items: center;
@@ -805,11 +855,26 @@ form label{
         grid-template-columns: repeat(8, 1fr);
         grid-template-areas:
                             "banner banner banner banner banner banner banner banner"
+                            "bio bio bio bio bio bio bio bio"
                             "tour tour tour tour tour tour tour tour"
                             "music music music music music music music music"
                             "gallery gallery gallery gallery gallery gallery gallery gallery"
                             "footer footer footer footer footer footer footer footer";
         column-gap: 10px;
+    }
+
+    .bio{
+        grid-area: bio;
+        grid-column-start: 2;
+        grid-column-end: 8;
+
+        &__titulo{
+            font-size: 30px;
+        }
+
+        &__texto{
+            text-align: justify;
+        }
     }
 
     .sectionTour{
