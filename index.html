@@ -37,7 +37,7 @@
             </nav>
             <nav class="header__navDesktop">
                 <ul>
-                    <li><a href="./index.html">Home</a></li>
+                    <li class="active"><a href="./index.html">Home</a></li>
                     <li><a href="./views/tour.html">Tour</a></li>
                     <li><a href="./views/music.html">Musica</a></li>
                     <li><a href="./views/gallery.html">Galeria</a></li>
@@ -156,22 +156,22 @@
                     <h2 class="sectionMusicHome__title--margin">Last releases</h2>
                 </div>
                 <div class="sectionMusicHome__homePhoto--1">
-                    <a href="">
+                    <a href="./views/music.html">
                         <img class="sectionMusicHome__miniAlbumHome" src="./images/music/01.jpg" alt="Cover del track Nora En Pure Monsoon.">
                     </a>
                 </div>
                 <div class="sectionMusicHome__homePhoto--2">
-                    <a href="">
+                    <a href="./views/music.html">
                         <img class="sectionMusicHome__miniAlbumHome" src="./images/music/03.jpg" alt="Cover del track Nora En Pure Enchantment.">
                     </a>
                 </div>
                 <div class="sectionMusicHome__homePhoto--3">
-                    <a href="">
+                    <a href="./views/music.html">
                         <img class="sectionMusicHome__miniAlbumHome" src="./images/music/05.jpg" alt="Cover del track Nora En Pure Wetlands.">
                     </a>
                 </div>
                 <div class="sectionMusicHome__homePhoto--4">
-                    <a href="">
+                    <a href="./views/music.html">
                         <img class="sectionMusicHome__miniAlbumHome" src="./images/music/07.jpg" alt="Cover del track Nora en Pure Delta, Bartok.">
                     </a>
                 </div>
@@ -185,10 +185,10 @@
                     <h2 class="sectionGalleryHome__title--margin">Galeria</h2>
                 </div>
                 <div class="sectionGalleryHome__photo--1">
-                    <img class="sectionGalleryHome__miniCover" src="./images/photos/mini001.png" alt="Nora En Pure sonriendo, con el público a sus espaldas.">
+                    <img id="myImg" class="sectionGalleryHome__miniCover" src="./images/photos/mini001.png" alt="Nora En Pure sonriendo, con el público a sus espaldas.">
                 </div>
                 <div class="sectionGalleryHome__photo--2">
-                    <img class="sectionGalleryHome__miniCover" src="./images/photos/mini002.png" alt="Nora En Pure en un festival, posando frente a una vuelta al mundo, mirando hacia la derecha con los brazos abiertos.">
+                    <img id="myImg" class="sectionGalleryHome__miniCover" src="./images/photos/mini002.png" alt="Nora En Pure en un festival, posando frente a una vuelta al mundo, mirando hacia la derecha con los brazos abiertos.">
                 </div>
                 <div class="sectionGalleryHome__photo--3">
                     <img class="sectionGalleryHome__miniCover" src="./images/photos/mini003.png" alt="Nora en Pure durante un show en vivo.">
@@ -201,6 +201,11 @@
                     <a href="./views/gallery.html">Show all</a>
                 </div>
             </section>
+
+            <div id="modalContainer" class="modal">
+                <span class="modal__close">&times;</span>
+                <img class="modal__content" id="modalImage">
+            </div>
 
             <footer class="footer">
                 <img class="footer__logoFooter" src="./images/noraenpure_logo_big.png" alt="Logo de Nora En Pure.">
@@ -231,6 +236,7 @@
         </div>
 
         <script>
+            // Script para el nav mobile
             function myFunction() {
                 var x = document.getElementById("navMobile");
                 if (x.style.display === "grid") {
@@ -238,7 +244,26 @@
                 } else {
                     x.style.display = "grid";
                 }
-            } 
+            }
+
+            // Script para el modal de fotos
+            var modal = document.getElementById("modalContainer");
+            var images = document.getElementsByClassName("sectionGalleryHome__miniCover");
+            var modalImg = document.getElementById("modalImage");
+
+            for (var i = 0; i < images.length; i++) {
+                var img = images[i];
+                img.onclick = function(evt) {
+                    modal.style.display = "block";
+                    modalImg.src = this.src;
+                }
+            }
+
+            var span = document.getElementsByClassName("modal__close")[0];
+
+            span.onclick = function() {
+                modal.style.display = "none";
+            }
         </script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>

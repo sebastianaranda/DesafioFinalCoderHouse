@@ -77,10 +77,14 @@ ul {
     .header__navDesktop li {
       height: 60px;
       list-style: none;
-      padding-top: 40px; }
+      padding-top: 35px;
+      border-top: 5px solid #FFFFFF;
+      transition-duration: 100ms;
+      transition-timing-function: ease-in-out; }
       .header__navDesktop li:hover {
-        transform: scale(1.1);
-        transition-duration: 100ms; }
+        border-top: 5px solid #000000; }
+      .header__navDesktop li.active {
+        border-top: 5px solid #000000; }
     .header__navDesktop a {
       color: #333333;
       font-family: Poppins;
@@ -179,9 +183,12 @@ ul {
   text-align: center; }
   .tourTable td {
     border-bottom: 2px solid #F5F5F5; }
-  .tourTable tr:hover {
-    transform: scale(1.01);
-    transition-duration: 100ms; }
+  .tourTable tr {
+    transition-duration: 200ms;
+    transition-timing-function: ease-in-out; }
+    .tourTable tr:hover {
+      transform: scale(1.01);
+      color: #000000; }
   .tourTable__numeroTourDate {
     width: 80px;
     font-family: Poppins;
@@ -259,25 +266,29 @@ ul {
       margin-top: 30px;
       margin-bottom: 48px; }
   .sectionMusicHome__homePhoto--1 {
-    grid-area: photoLeft; }
+    grid-area: photoLeft;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out; }
     .sectionMusicHome__homePhoto--1:hover {
-      transform: scale(1.2);
-      transition-duration: 250ms; }
+      transform: scale(1.1); }
   .sectionMusicHome__homePhoto--2 {
-    grid-area: photoLeftMid; }
+    grid-area: photoLeftMid;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out; }
     .sectionMusicHome__homePhoto--2:hover {
-      transform: scale(1.2);
-      transition-duration: 250ms; }
+      transform: scale(1.1); }
   .sectionMusicHome__homePhoto--3 {
-    grid-area: photoRightMid; }
+    grid-area: photoRightMid;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out; }
     .sectionMusicHome__homePhoto--3:hover {
-      transform: scale(1.2);
-      transition-duration: 250ms; }
+      transform: scale(1.1); }
   .sectionMusicHome__homePhoto--4 {
-    grid-area: photoRight; }
+    grid-area: photoRight;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out; }
     .sectionMusicHome__homePhoto--4:hover {
-      transform: scale(1.2);
-      transition-duration: 250ms; }
+      transform: scale(1.1); }
   .sectionMusicHome__miniAlbumHome {
     width: 90%;
     max-width: 310px;
@@ -303,26 +314,39 @@ ul {
       margin-bottom: 48px; }
   .sectionGalleryHome__photo--1 {
     grid-area: photoLeft;
-    filter: brightness(70%); }
+    filter: brightness(70%);
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out; }
     .sectionGalleryHome__photo--1:hover {
-      filter: brightness(100%); }
+      filter: brightness(100%);
+      transition: 0.5s; }
   .sectionGalleryHome__photo--2 {
     grid-area: photoLeftMid;
-    filter: brightness(70%); }
+    filter: brightness(70%);
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out; }
     .sectionGalleryHome__photo--2:hover {
-      filter: brightness(100%); }
+      filter: brightness(100%);
+      transition: 0.5s; }
   .sectionGalleryHome__photo--3 {
     grid-area: photoRightMid;
-    filter: brightness(70%); }
+    filter: brightness(70%);
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out; }
     .sectionGalleryHome__photo--3:hover {
-      filter: brightness(100%); }
+      filter: brightness(100%);
+      transition: 0.5s; }
   .sectionGalleryHome__photo--4 {
     grid-area: photoRight;
-    filter: brightness(70%); }
+    filter: brightness(70%);
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out; }
     .sectionGalleryHome__photo--4:hover {
-      filter: brightness(100%); }
+      filter: brightness(100%);
+      transition: 0.5s; }
   .sectionGalleryHome__miniCover {
-    width: 100%; }
+    width: 100%;
+    cursor: pointer; }
   .sectionGalleryHome__showMore {
     grid-area: showMore;
     margin: auto;
@@ -367,10 +391,12 @@ ul {
     margin-left: 10%; }
   .galleryPhotos__photo {
     filter: brightness(80%);
+    transition: 0.5s;
     width: 100%;
     margin: auto; }
     .galleryPhotos__photo:hover {
-      filter: brightness(100%); }
+      filter: brightness(100%);
+      transition: 0.5s; }
 
 .galleryVideos {
   grid-area: videos;
@@ -395,13 +421,16 @@ section a {
   grid-column-end: 12; }
   .releasesAndSpotify__cover {
     filter: brightness(70%);
+    transition: 0.5s;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
     width: 90%;
     max-width: 190px;
     margin-bottom: 15px; }
     .releasesAndSpotify__cover:hover {
       transform: scale(1.1);
-      transition-duration: 200ms;
-      filter: brightness(100%); }
+      filter: brightness(100%);
+      transition: 0.5s; }
   .releasesAndSpotify__spotifyPlayer {
     min-height: 400px; }
 
@@ -412,12 +441,15 @@ section a {
   grid-column-end: 12; }
   .discography__miniCover {
     filter: brightness(70%);
+    transition: 0.5s;
+    transition-duration: 250ms;
+    transition-timing-function: ease-in-out;
     width: 90%;
     margin-bottom: 16px; }
     .discography__miniCover:hover {
       transform: scale(1.1);
-      transition-duration: 200ms;
-      filter: brightness(100%); }
+      filter: brightness(100%);
+      transition: 0.5s; }
 
 .col {
   text-align: center; }
@@ -469,6 +501,52 @@ form label {
   font-family: Poppins;
   font-style: normal;
   line-height: 84.3%; }
+
+.modal {
+  display: none;
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */ }
+  .modal__close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s; }
+    .modal__close:hover, .modal__close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer; }
+  .modal__content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    animation-name: zoom;
+    animation-duration: 0.6s; }
+
+@keyframes zoom {
+  from {
+    transform: scale(0); }
+  to {
+    transform: scale(1); } }
 
 @media only screen and (max-width: 768px) {
   .mainGrid {
@@ -524,26 +602,25 @@ form label {
     .sectionMusicHome__title--margin {
       margin-top: 20px;
       margin-bottom: 20px; }
-    .sectionMusicHome__homePhoto--1 {
-      grid-area: photoLeftUp; }
-      .sectionMusicHome__homePhoto--1:hover {
-        transform: scale(1.1);
-        transition-duration: 250ms; }
-    .sectionMusicHome__homePhoto--2 {
-      grid-area: photoRightUp; }
-      .sectionMusicHome__homePhoto--2:hover {
-        transform: scale(1.1);
-        transition-duration: 250ms; }
-    .sectionMusicHome__homePhoto--3 {
-      grid-area: photoLeftDown; }
-      .sectionMusicHome__homePhoto--3:hover {
-        transform: scale(1.1);
-        transition-duration: 250ms; }
-    .sectionMusicHome__homePhoto--4 {
-      grid-area: photoRightDown; }
-      .sectionMusicHome__homePhoto--4:hover {
-        transform: scale(1.1);
-        transition-duration: 250ms; }
+    .sectionMusicHome__homePhoto {
+      transition-duration: 250ms;
+      transition-timing-function: ease-in-out; }
+      .sectionMusicHome__homePhoto--1 {
+        grid-area: photoLeftUp; }
+        .sectionMusicHome__homePhoto--1:hover {
+          transform: scale(1.1); }
+      .sectionMusicHome__homePhoto--2 {
+        grid-area: photoRightUp; }
+        .sectionMusicHome__homePhoto--2:hover {
+          transform: scale(1.1); }
+      .sectionMusicHome__homePhoto--3 {
+        grid-area: photoLeftDown; }
+        .sectionMusicHome__homePhoto--3:hover {
+          transform: scale(1.1); }
+      .sectionMusicHome__homePhoto--4 {
+        grid-area: photoRightDown; }
+        .sectionMusicHome__homePhoto--4:hover {
+          transform: scale(1.1); }
   .sectionGalleryHome {
     grid-template-areas: "title title title title title title title title title title title title" "photoLeftUp photoLeftUp photoLeftUp photoLeftUp photoLeftUp photoLeftUp photoRightUp photoRightUp photoRightUp photoRightUp photoRightUp photoRightUp" "photoLeftDown photoLeftDown photoLeftDown photoLeftDown photoLeftDown photoLeftDown photoRightDown photoRightDown photoRightDown photoRightDown photoRightDown photoRightDown" "showMore showMore showMore showMore showMore showMore showMore showMore showMore showMore showMore showMore"; }
     .sectionGalleryHome__title--margin {
@@ -631,10 +708,12 @@ form label {
     .tourTable__icoTicketMobile {
       display: block; }
   #containerReleasesAndSpotify .miniCoverReleases {
-    filter: brightness(100%); }
+    filter: brightness(100%);
+    transition: 0.5s; }
     #containerReleasesAndSpotify .miniCoverReleases:hover {
       transform: none; }
   #containerDiscography .miniAlbumHome {
-    filter: brightness(100%); }
+    filter: brightness(100%);
+    transition: 0.5s; }
     #containerDiscography .miniAlbumHome:hover {
       transform: none; } }
