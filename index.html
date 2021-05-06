@@ -185,16 +185,16 @@
                     <h2 class="sectionGalleryHome__title--margin">Galeria</h2>
                 </div>
                 <div class="sectionGalleryHome__photo--1">
-                    <img id="myImg" class="sectionGalleryHome__miniCover" src="./images/photos/mini001.png" alt="Nora En Pure sonriendo, con el público a sus espaldas.">
+                    <img id="myImg" class="sectionGalleryHome__miniCover" src="./images/photos/mini001.png" alt="Nora En Pure sonriendo, con el público a sus espaldas." data-large="./images/photos/large/mini001.jpg">
                 </div>
                 <div class="sectionGalleryHome__photo--2">
-                    <img id="myImg" class="sectionGalleryHome__miniCover" src="./images/photos/mini002.png" alt="Nora En Pure en un festival, posando frente a una vuelta al mundo, mirando hacia la derecha con los brazos abiertos.">
+                    <img id="myImg" class="sectionGalleryHome__miniCover" src="./images/photos/mini002.png" alt="Nora En Pure en un festival, posando frente a una vuelta al mundo, mirando hacia la derecha con los brazos abiertos." data-large="./images/photos/large/mini002.jpg">
                 </div>
                 <div class="sectionGalleryHome__photo--3">
-                    <img class="sectionGalleryHome__miniCover" src="./images/photos/mini003.png" alt="Nora en Pure durante un show en vivo.">
+                    <img class="sectionGalleryHome__miniCover" src="./images/photos/mini003.png" alt="Nora en Pure durante un show en vivo." data-large="./images/photos/large/mini003.jpg">
                 </div>
                 <div class="sectionGalleryHome__photo--4">
-                    <img class="sectionGalleryHome__miniCover" src="./images/photos/mini004.png" alt="Nora en Pure durante un show en vivo, mirando hacia el público.">
+                    <img class="sectionGalleryHome__miniCover" src="./images/photos/mini004.png" alt="Nora en Pure durante un show en vivo, mirando hacia el público." data-large="./images/photos/large/mini004.jpg">
                 </div>
                  
                 <div class="sectionGalleryHome__showMore">
@@ -255,7 +255,7 @@
                 var img = images[i];
                 img.onclick = function(evt) {
                     modal.style.display = "block";
-                    modalImg.src = this.src;
+                    modalImg.src = this.getAttribute("data-large");
                 }
             }
 
