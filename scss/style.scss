@@ -45,6 +45,17 @@ ul{
     padding: 0;
 }
 
+.tituloSeccion{
+    font-family: Poppins;
+    font-style: normal;
+    color: $colorBlackDark;
+    font-weight: 600;
+    font-size: 40px;
+    text-align: left;
+    margin-top: 30px;
+    margin-bottom: 48px;
+}
+
 .mainGrid{
     width: 100%;
     display: grid;
@@ -224,10 +235,12 @@ ul{
     &__photo{
         max-width: 80%;
         margin: auto;
-        margin-top: 130px;
+        margin-top: 60px;
     }
     &__titulo{
         @extend .tituloSeccion;
+        margin-top: 60px;
+        margin-bottom: 30px;
 
         &--normal{
             font-weight: 400;
@@ -257,17 +270,6 @@ ul{
     grid-column-start: 2;
     grid-column-end: 12;
     
-}
-
-.tituloSeccion{
-    font-family: Poppins;
-    font-style: normal;
-    color: $colorBlackDark;
-    font-weight: 600;
-    font-size: 40px;
-    text-align: left;
-    margin-top: 30px;
-    margin-bottom: 48px;
 }
 
 .tourTable{
@@ -728,6 +730,10 @@ form label{
     font-family: Poppins;
     font-style: normal;
     line-height: 84.3%;
+}
+
+.btn{
+    font-family: Poppins;
 }
 
 .modal{

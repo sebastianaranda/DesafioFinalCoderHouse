@@ -50,7 +50,7 @@
         <a id="topPage" class="topPageAnchor"></a>
         
         <div class="gridContact">
-
+            
             <section class="banner">
                 <img class="banner__bannerImg" src="../images/banners/banner04.jpg" alt="Nora En Pure mirando sonriente a la camara durante una presentación en vivo.">
             </section>
@@ -103,23 +103,26 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <form>
+                                <form class="needs-validation" novalidate>
                                     <div class="row mb-3">
                                         <div class="col-sm-5 col-form-label">
-                                            <label for="inputEventName">Event Name</label>
+                                            <label for="inputEventName">Evento*</label>
                                         </div>
                                         <div class="col-sm-7">
-                                            <input type="text" class="form-control" id="inputEventName" placeholder="Nombre del Evento">
+                                            <input type="text" class="form-control" id="inputEventName" placeholder="Nombre del Evento" required>
+                                        </div>
+                                        <div class="valid-feedback">
+                                            Looks good!
                                         </div>
                                     </div>
 
                                     <div class="row mb-3">
                                         <div class="col-sm-5 col-form-label">
-                                            <label for="inputEventLocation">Event Location</label>
+                                            <label for="inputEventLocation">Locación*</label>
                                         </div>
                                         <div class="col-sm-7">
-                                            <select class="form-select" aria-labelledby="inputEventLocation" id="inputEventLocation">
-                                                <option selected>Seleccione el tipo de evento</option>
+                                            <select class="form-select" aria-labelledby="inputEventLocation" id="inputEventLocation" required>
+                                                <option value="" disabled selected>Seleccione el tipo de evento</option>
                                                 <option value="1">Indoor</option>
                                                 <option value="2">Outdoor</option>
                                                 <option value="3">Festival</option>
@@ -130,20 +133,20 @@
 
                                     <div class="row mb-3">
                                         <div class="col-sm-5 col-form-label">
-                                            <label for="inputEventDate">Event Date</label>
+                                            <label for="inputEventDate">Fecha*</label>
                                         </div>
                                         <div class="col-sm-7">
-                                            <input type="date" class="form-control" id="inputEventDate">
+                                            <input type="date" class="form-control" id="inputEventDate" required>
                                         </div>
                                     </div>
 
                                     <div class="row mb-3">
                                         <div class="col-sm-5 col-form-label">
-                                            <label for="inputEventSize">Event Size</label>
+                                            <label for="inputEventSize">Capacidad*</label>
                                         </div>
                                         <div class="col-sm-7">
-                                            <select class="form-select" aria-labelledby="inputEventSize" id="inputEventSize">
-                                                <option selected>Seleccione el tamaño del evento</option>
+                                            <select class="form-select" aria-labelledby="inputEventSize" id="inputEventSize" required>
+                                                <option value="" disabled selected>Seleccione la capacidad del evento</option>
                                                 <option value="1">1 - 500 personas</option>
                                                 <option value="2">501 - 1.000 personas</option>
                                                 <option value="3">1.001 - 5.000 personas</option>
@@ -155,46 +158,46 @@
 
                                     <div class="row mb-3">
                                         <div class="col-sm-5 col-form-label">
-                                            <label for="inputSetDuration">Set Duration</label>
+                                            <label for="inputSetDuration">Duración del Set*</label>
                                         </div>
                                         <div class="col-sm-7">
-                                            <input type="number" class="form-control" id="inputSetDuration" placeholder="En minutos">
+                                            <input type="number" class="form-control" id="inputSetDuration" placeholder="En minutos" required>
                                         </div>
                                     </div>
 
                                     <div class="row mb-3">
                                         <div class="col-sm-5 col-form-label">
-                                            <label for="inputCompanyName">Company</label>
+                                            <label for="inputCompanyName">Compania*</label>
                                         </div>
                                         <div class="col-sm-7">
-                                            <input type="text" class="form-control" id="inputCompanyName" placeholder="Nombre de la compania">
+                                            <input type="text" class="form-control" id="inputCompanyName" placeholder="Nombre de la compania" required>
                                         </div>
                                     </div>
 
                                     <div class="row mb-3">
                                         <div class="col-sm-5 col-form-label">
-                                            <label for="inputFirstName">First Name</label></div>
+                                            <label for="inputFirstName">Nombre*</label></div>
                                         <div class="col-sm-7">
-                                            <input type="text" class="form-control" id="inputFirstName" placeholder="Ingrese su nombre">
+                                            <input type="text" class="form-control" id="inputFirstName" placeholder="Ingrese su nombre" required>
                                         </div>
                                     </div>
 
                                     <div class="row mb-3">
                                         <div class="col-sm-5 col-form-label">
-                                            <label for="inputLastName">Last Name</label>
+                                            <label for="inputLastName">Apellido*</label>
                                         </div>
                                         <div class="col-sm-7">
-                                            <input type="text" class="form-control" id="inputLastName" placeholder="Ingrese su apellido">
+                                            <input type="text" class="form-control" id="inputLastName" placeholder="Ingrese su apellido" required>
                                         </div>
                                     </div>
 
                                     <div class="row mb-3">
                                         <div class="col-sm-5 col-form-label">
-                                            <label for="inputCountry">Country</label>
+                                            <label for="inputCountry">Región*</label>
                                         </div>
                                         <div class="col-sm-7">
-                                            <select class="form-select" aria-label="Default select example" id="inputCountry" >
-                                                <option selected>Seleccione la región de su país</option>
+                                            <select class="form-select" place aria-label="Default select example" id="inputCountry" required>
+                                                <option value="" disabled selected>Seleccione la región de su país</option>
                                                 <option value="1">NA</option>
                                                 <option value="2">LATAM</option>
                                                 <option value="3">EMEA</option>
@@ -205,7 +208,7 @@
 
                                     <div class="row mb-3">
                                         <div class="col-sm-5 col-form-label">
-                                            <label for="inputPhoneNumber">Phone Number</label>
+                                            <label for="inputPhoneNumber">Teléfono</label>
                                         </div>
                                         <div class="col-sm-7">
                                             <input type="tel" class="form-control" id="inputPhoneNumber" placeholder="Ingrese su número de contacto">
@@ -214,16 +217,16 @@
 
                                     <div class="row mb-3">
                                         <div class="col-sm-5 col-form-label">
-                                            <label for="inputEmail">Email</label>
+                                            <label for="inputEmail">Email*</label>
                                         </div>
                                         <div class="col-sm-7">
-                                            <input type="email" class="form-control" id="inputEmail" placeholder="Ingrese su email de contacto">
+                                            <input type="email" class="form-control" id="inputEmail" placeholder="Ingrese su email de contacto" required>
                                         </div>
                                     </div>
 
                                     <div class="row mb-3">
                                         <div class="col-sm-5 col-form-label">
-                                            <label for="inputMessage">Message</label>
+                                            <label for="inputMessage">Información Adicional</label>
                                         </div>
                                         <div class="col-sm-7">
                                             <textarea class="form-control" id="inputMessage" placeholder="Ingrese cualquier otra información adicional"></textarea>
@@ -234,7 +237,7 @@
                                         <div class="col-sm-5 col-form-label">
                                         </div>
                                         <div class="col-sm-7">
-                                            <button type="submit" class="btn btn-dark">Send</button>
+                                            <button type="submit" class="btn btn-dark">Enviar</button>
                                         </div>
                                     </div>
                                 </form>
@@ -242,7 +245,6 @@
                         </div>
                     </div>
                 </div>
-
             </section>
 
             <footer class="footer">
@@ -285,6 +287,28 @@
                     x.style.display = "grid";
                 }
             } 
+        </script>
+        <script>
+            // Example starter JavaScript for disabling form submissions if there are invalid fields
+            (function () {
+                'use strict'
+                
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.querySelectorAll('.needs-validation')
+                
+                // Loop over them and prevent submission
+                Array.prototype.slice.call(forms)
+                    .forEach(function (form) {
+                        form.addEventListener('submit', function (event) {
+                            if (!form.checkValidity()) {
+                                event.preventDefault()
+                                event.stopPropagation()
+                            }
+                            
+                            form.classList.add('was-validated')
+                        }, false)
+                    })
+                })()
         </script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>

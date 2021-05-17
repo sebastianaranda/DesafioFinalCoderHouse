@@ -28,6 +28,16 @@ ul {
   margin: 0;
   padding: 0; }
 
+.tituloSeccion, .bio__titulo, .sectionMusicHome__title--margin, .sectionGalleryHome__title--margin, .galleryPhotos__title, .galleryVideos__title, .releasesAndSpotify__title, .discography__title, .containerContact__title {
+  font-family: Poppins;
+  font-style: normal;
+  color: #000000;
+  font-weight: 600;
+  font-size: 40px;
+  text-align: left;
+  margin-top: 30px;
+  margin-bottom: 48px; }
+
 .mainGrid {
   width: 100%;
   display: grid;
@@ -167,10 +177,13 @@ ul {
   .bio__photo {
     max-width: 80%;
     margin: auto;
-    margin-top: 130px; }
-  .bio__titulo--normal {
-    font-weight: 400;
-    color: #333333; }
+    margin-top: 60px; }
+  .bio__titulo {
+    margin-top: 60px;
+    margin-bottom: 30px; }
+    .bio__titulo--normal {
+      font-weight: 400;
+      color: #333333; }
   .bio__texto {
     font-family: Poppins;
     font-weight: 400;
@@ -185,16 +198,6 @@ ul {
   background-color: #FFFFFF;
   grid-column-start: 2;
   grid-column-end: 12; }
-
-.tituloSeccion, .bio__titulo, .sectionMusicHome__title--margin, .sectionGalleryHome__title--margin, .galleryPhotos__title, .galleryVideos__title, .releasesAndSpotify__title, .discography__title, .containerContact__title {
-  font-family: Poppins;
-  font-style: normal;
-  color: #000000;
-  font-weight: 600;
-  font-size: 40px;
-  text-align: left;
-  margin-top: 30px;
-  margin-bottom: 48px; }
 
 .tourTable {
   width: 100%;
@@ -536,6 +539,9 @@ form label {
   font-family: Poppins;
   font-style: normal;
   line-height: 84.3%; }
+
+.btn {
+  font-family: Poppins; }
 
 .modal {
   display: none;
