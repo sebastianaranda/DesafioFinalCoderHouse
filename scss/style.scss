@@ -784,9 +784,13 @@ form label{
 
 }
 
+.bodyError{
+    background-color: $colorBlackDark;
+}
 .error{
-    height: 900px;
+    height: 600px;
     grid-area: error;
+    background-color: $colorWhite;
 
     &__title{
         @extend .tituloSeccion;
@@ -794,6 +798,13 @@ form label{
         font-size: 144px;
         line-height: 144px;
         margin-top: 100px;
+    }
+    &__subtitle{
+        @extend .tituloSeccion;
+        text-align: center;
+        font-size: 24px;
+        line-height: 24px;
+        margin-top: 40px;
     }
 }
 
@@ -936,6 +947,9 @@ form label{
                             "margin logo logo logo upArrow"
                             "socialMedia socialMedia socialMedia socialMedia socialMedia"
                             "copyright copyright copyright copyright copyright";
+        &__copyrightText{
+            margin-top: 1rem;
+        }
     }
 
     .tourTable{
@@ -970,6 +984,22 @@ form label{
 
     .col-form-label{
         text-align: left;
+    }
+
+    .error{
+        height: auto;
+
+        &__title{
+            font-size: 100px;
+            line-height: 100px;
+            margin-top: 90px;
+        }
+        &__subtitle{
+            font-size: 24px;
+            line-height: 24px;
+            margin-top: 40px;
+            margin-bottom: 100px;
+        }
     }
 }
 
@@ -1070,6 +1100,22 @@ form label{
             &:hover{
                 transform: none;
             }
+        }
+    }
+
+    .error{
+        height: auto;
+
+        &__title{
+            font-size: 64px;
+            line-height: 64px;
+            margin-top: 50px;
+        }
+        &__subtitle{
+            font-size: 26px;
+            line-height: 50px;
+            margin-left: 16px;
+            margin-right: 16px;
         }
     }
 }

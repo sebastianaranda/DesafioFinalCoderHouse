@@ -28,7 +28,7 @@ ul {
   margin: 0;
   padding: 0; }
 
-.tituloSeccion, .bio__titulo, .sectionMusicHome__title--margin, .sectionGalleryHome__title--margin, .galleryPhotos__title, .galleryVideos__title, .releasesAndSpotify__title, .discography__title, .containerContact__title, .error__title {
+.tituloSeccion, .bio__titulo, .sectionMusicHome__title--margin, .sectionGalleryHome__title--margin, .galleryPhotos__title, .galleryVideos__title, .releasesAndSpotify__title, .discography__title, .containerContact__title, .error__title, .error__subtitle {
   font-family: Poppins;
   font-style: normal;
   color: #000000;
@@ -382,7 +382,7 @@ ul {
   margin-top: 100px;
   grid-template-areas: "banner banner banner banner banner banner banner banner banner banner banner banner" "releaseAndSpotify releaseAndSpotify releaseAndSpotify releaseAndSpotify releaseAndSpotify releaseAndSpotify releaseAndSpotify releaseAndSpotify releaseAndSpotify releaseAndSpotify releaseAndSpotify releaseAndSpotify" "discography discography discography discography discography discography discography discography discography discography discography discography" "footer footer footer footer footer footer footer footer footer footer footer footer"; }
 
-.sectionDiscography .tituloSeccion, .sectionDiscography .bio__titulo, .sectionDiscography .sectionMusicHome__title--margin, .sectionDiscography .sectionGalleryHome__title--margin, .sectionDiscography .galleryPhotos__title, .sectionDiscography .galleryVideos__title, .sectionDiscography .releasesAndSpotify__title, .sectionDiscography .discography__title, .sectionDiscography .containerContact__title, .sectionDiscography .error__title {
+.sectionDiscography .tituloSeccion, .sectionDiscography .bio__titulo, .sectionDiscography .sectionMusicHome__title--margin, .sectionDiscography .sectionGalleryHome__title--margin, .sectionDiscography .galleryPhotos__title, .sectionDiscography .galleryVideos__title, .sectionDiscography .releasesAndSpotify__title, .sectionDiscography .discography__title, .sectionDiscography .containerContact__title, .sectionDiscography .error__title, .sectionDiscography .error__subtitle {
   grid-area: title;
   margin-bottom: 28px; }
 
@@ -587,14 +587,23 @@ form label {
   margin-top: 100px;
   grid-template-areas: "error error error error error error error error error error error error" "footer footer footer footer footer footer footer footer footer footer footer footer"; }
 
+.bodyError {
+  background-color: #000000; }
+
 .error {
-  height: 900px;
-  grid-area: error; }
+  height: 600px;
+  grid-area: error;
+  background-color: #FFFFFF; }
   .error__title {
     text-align: center;
     font-size: 144px;
     line-height: 144px;
     margin-top: 100px; }
+  .error__subtitle {
+    text-align: center;
+    font-size: 24px;
+    line-height: 24px;
+    margin-top: 40px; }
 
 @media only screen and (max-width: 768px) {
   .mainGrid {
@@ -685,6 +694,8 @@ form label {
   .footer {
     grid-template-columns: repeat(5, 1fr);
     grid-template-areas: "margin logo logo logo upArrow" "socialMedia socialMedia socialMedia socialMedia socialMedia" "copyright copyright copyright copyright copyright"; }
+    .footer__copyrightText {
+      margin-top: 1rem; }
   .tourTable__numeroTourDate {
     width: 10%;
     font-size: 30px; }
@@ -706,7 +717,18 @@ form label {
   .tourTable__icoTicketMobile {
     display: block; }
   .col-form-label {
-    text-align: left; } }
+    text-align: left; }
+  .error {
+    height: auto; }
+    .error__title {
+      font-size: 100px;
+      line-height: 100px;
+      margin-top: 90px; }
+    .error__subtitle {
+      font-size: 24px;
+      line-height: 24px;
+      margin-top: 40px;
+      margin-bottom: 100px; } }
 
 @media only screen and (max-width: 425px) {
   .header {
@@ -728,7 +750,7 @@ form label {
       text-align: justify; }
   .sectionTour {
     grid-area: tour; }
-  .sectionTour .tituloSeccion, .sectionTour .bio__titulo, .sectionTour .sectionMusicHome__title--margin, .sectionTour .sectionGalleryHome__title--margin, .sectionTour .galleryPhotos__title, .sectionTour .galleryVideos__title, .sectionTour .releasesAndSpotify__title, .sectionTour .discography__title, .sectionTour .containerContact__title, .sectionTour .error__title {
+  .sectionTour .tituloSeccion, .sectionTour .bio__titulo, .sectionTour .sectionMusicHome__title--margin, .sectionTour .sectionGalleryHome__title--margin, .sectionTour .galleryPhotos__title, .sectionTour .galleryVideos__title, .sectionTour .releasesAndSpotify__title, .sectionTour .discography__title, .sectionTour .containerContact__title, .sectionTour .error__title, .sectionTour .error__subtitle {
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 10%; }
@@ -764,4 +786,15 @@ form label {
     filter: brightness(100%);
     transition: 0.5s; }
     #containerDiscography .miniAlbumHome:hover {
-      transform: none; } }
+      transform: none; }
+  .error {
+    height: auto; }
+    .error__title {
+      font-size: 64px;
+      line-height: 64px;
+      margin-top: 50px; }
+    .error__subtitle {
+      font-size: 26px;
+      line-height: 50px;
+      margin-left: 16px;
+      margin-right: 16px; } }
